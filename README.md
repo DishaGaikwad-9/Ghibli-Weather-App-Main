@@ -21,40 +21,20 @@ This project combines functional utility with artistic UI design inspired by the
 
 💻 Desktop application (Windows/Linux/Mac supported via Electron)
 
-🧠 Project Concept
-
-The idea behind this project was to combine:
-
-Real-world utility (weather app)
-
-Creative UI design
-
-Desktop application development
-
-Aesthetic storytelling through interface design
-
-Instead of a normal weather app, this project focuses on creating an emotional and visual experience, making the app feel peaceful, cozy, and magical — inspired by Ghibli movies.
 
 🛠️ Tech Stack
 
 Electron.js – Desktop application framework
-
 JavaScript (Vanilla JS) – Logic & functionality
-
 HTML5 – Structure
-
 CSS3 – Styling & animations
-
 Weather API – Real-time weather data
-
 Node.js – Runtime environment
 
 🖥️ Platform Support
 
 Windows
-
 Linux
-
 macOS
 
 📁 Project Structure
@@ -85,23 +65,14 @@ npm start
 🎯 Learning Outcomes
 
 This project helped me learn:
-
 Electron app architecture
-
 Desktop app development using web technologies
-
 API integration
-
 UI/UX design principles
-
 Animation handling in CSS
-
 Project structuring
-
 Clean code organization
-
 Real-world app workflow
-
 GitHub project structuring
 
 📸 Preview
