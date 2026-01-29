@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('default.jpg');
+    background-size: cover; /* Ensures full background coverage */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevents tiling */
+    height: 100vh; /* Ensures it takes full screen */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #333;
+    text-align: center;
+}
+
+/* 🌿 Ghibli-Themed App Container */
+.app-container {
+    background: rgba(255, 255, 255, 0.483);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🎨 Header Styling */
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 🔍 Search Box */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #2c3e50;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #ffcc00;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #8c7305;
+}
+
+/* 🌦️ Weather Info Box */
+#weather-info {
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 12px;
+    width: 300px;
+    font-size: 18px;
+}
+
+/* 🌡️ Floating Temperature Box */
+.temp-box {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 3px solid #2c3e50;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ✨ Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0px); }
+}
+
+#toggle-unit {
+    margin-top: 5px;
+    padding: 6px;
+    font-size: 14px;
+    background-color: #ffcc00;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+#toggle-unit:hover {
+    background-color: #ffdd44;
+}
+
+/* 🟡 Totoro Mute/Unmute Button */
+#muteButton {
+    background-color: transparent;  /* No background */
+    border: none;  /* Remove border */
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;  /* Position near bottom */
+    right: 20px;  /* Position near right */
+}
+
+#muteButton img {
+    width: 60px;  /* Adjust size */
+    height: 60px;
+    border-radius: 50%;  /* Make it circular */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+    transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+#muteButton:hover img {
+    transform: scale(1.1); /* Slightly enlarge when hovered */
+}
