@@ -107,3 +107,5 @@ GitHub project structuring
 📸 Preview
 <img width="1564" height="1185" alt="Screenshot 2026-01-30 014056" src="https://github.com/user-attachments/assets/832377d8-9fb9-4e9a-9b20-237863bd22f3" />
 <img width="1569" height="1178" alt="Screenshot 2026-01-30 014034" src="https://github.com/user-attachments/assets/4fbe4639-dd0d-407f-809c-92c1c632a865" />
+
+The Totoro button at the corner is actually used to mute and unmute the audio.
