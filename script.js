@@ -50,12 +50,14 @@ getWeatherButton.addEventListener("click", function () {
         });
 });
 
+
 // 🎨 Update UI Based on Weather
 function updateWeatherUI(weather) {
     let backgroundImg = "default.jpg";
-    let newMusicSrc = "default-music.mp3"; // Default background music
-    let message = "🌦️ Enter a city to see the weather!";
+    let newMusicSrc = "default-music.mp3"; 
+    let message = ""; // Initialize as empty, don't hardcode default text here
 
+    // 1. Determine base weather visuals
     switch (weather.toLowerCase()) {
         case "clear":
             backgroundImg = "sunny.jpg";
@@ -77,17 +79,29 @@ function updateWeatherUI(weather) {
             newMusicSrc = "snow-music.mp3";
             message = "❄️ Snow is falling! Time for a cozy blanket and hot chocolate.";
             break;
+        default:
+            // This handles any weather types not listed above (like Mumbai's "Haze" or "Mist")
+            message = `🌦️ The weather is ${weather}!`;
+            break;
     }
 
+    // 2. ❄️ COLD WEATHER OVERRIDE (Below 10°C)
+    if (currentTempCelsius <= 10 && weather.toLowerCase() !== "snow") {
+        backgroundImg = "snow.jpg"; 
+        newMusicSrc = "snow-music.mp3";
+        message = `❄️ Brrr! It's a chilly ${currentTempCelsius}°C. Bundle up like Sophie in the Waste!`;
+    }
+
+    // Apply the changes to the Page
     document.body.style.backgroundImage = `url('${backgroundImg}')`;
     weatherText.innerHTML = message;
 
     // 🔄 Switch Music Only If Not Muted
-    if (!isMuted && currentMusic.src !== newMusicSrc) {  
-        currentMusic.pause();  // Stop current music
-        currentMusic = new Audio(newMusicSrc); // Change to new music
+    if (!isMuted && !currentMusic.src.includes(newMusicSrc)) {  
+        currentMusic.pause();
+        currentMusic = new Audio(newMusicSrc);
         currentMusic.loop = true;
-        currentMusic.play();
+        currentMusic.play().catch(e => console.log("Audio waiting for user interaction"));
     }
 
     updateTemperatureDisplay();
